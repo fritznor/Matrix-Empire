@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akey</title>
     <style>
-        body {
+         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
@@ -13,17 +13,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Mete tout nan mitan vètikal */
-            gap: 50px; /* Espas egal ant cards */
+            justify-content: center;
+            gap: 30px;
         }
         .card {
-            padding: 20px;
+            
             width: 300px;
             background-color: #222;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(255,255,255,0.1);
-            margin: 0; /* Anpeche margin ajoute */
+            margin: 0;
+            cursor: pointer; /* Montre ke li klikab */
+            transition: transform 0.3s ease; /* Animasyon ti efè */
+        }
+        .card:hover {
+            transform: scale(1.03); /* Ti zoom lè sou li */
         }
         .card img {
             width: 100%;
