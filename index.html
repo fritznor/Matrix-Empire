@@ -17,20 +17,44 @@
         .splash {
             text-align: center;
         }
+        /* Sèk pou logo anime a */
+        .animated-circle {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 0 auto 20px; /* Espas anba a */
+        }
+        /* Logo ki pral tourne */
         .splash img {
-            max-width: 300px;
+            max-width: 80px;
             height: auto;
+            animation: rotate 5s linear infinite;
+        }
+        /* Animasyon */
+        @keyframes rotate {
+            0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
     </style>
 </head>
 <body>
     <div class="splash">
-        <img src="images/logo.jpeg" alt="Logo">
+        <!-- Sèk ak logo anime -->
+        <div class="animated-circle">
+            <img src="images/logo.jpeg" alt="Logo">
+        </div>
+        <!-- Ou ka ajoute tèks si w vle -->
+        <p style="color: white;">Chargement...</p>
     </div>
     <script>
         setTimeout(() => {
             window.location.href = 'cards.html';
-        }, 20000);
+        }, 20000); // Retire sa si ou pa vle redireksyon
     </script>
 </body>
 </html>
