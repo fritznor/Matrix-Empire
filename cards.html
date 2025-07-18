@@ -33,11 +33,24 @@
     </style>
 </head>
 <body>
-    <div class="card">
+   <!-- Premye Card (Bank 30eme) -->
+    <div class="card" onclick="window.location.href='login_bank.html'">
         <img src="images/Bank30eme.jpeg" alt="Bank 30eme">
     </div>
-    <div class="card">
+
+    <!-- Dezyèm Card (Taxipam) -->
+    <div class="card" onclick="window.location.href='login_taxipam.html'">
         <img src="images/Taxipam.jpeg" alt="Taxipam">
     </div>
+
+    <!-- Opsyonèl: JavaScript pou pi bon kontwòl -->
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Ou ka ajoute lòt lojik isit la si nesesè
+                window.location.href = this.getAttribute('data-href');
+            });
+        });
+    </script>
 </body>
 </html>
