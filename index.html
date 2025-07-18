@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+        .splash {
+            text-align: center;
+        }
+        .splash img {
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash">
+        <img src="images/logo.jpeg" alt="Logo">
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'cards.html';
+        }, 20000);
+    </script>
+</body>
+</html>
